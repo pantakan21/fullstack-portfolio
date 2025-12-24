@@ -11,14 +11,15 @@ function Header() {
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#101922]/80 backdrop-blur-md border-b border-solid border-[#f0f2f4] dark:border-[#2a3441] px-4 lg:px-10 py-3 shadow-sm">
             <div className="layout-container flex justify-center w-full">
                 <div className="flex items-center justify-between w-full max-w-[1280px]">
-                    <div className="flex items-center gap-4 text-[#111418] dark:text-white">
-                        <div className="flex items-center justify-center size-8 rounded bg-primary/10 text-primary">
-                            <span className="material-symbols-outlined text-[24px]">
+                    <div className="flex items-center gap-2 sm:gap-4 text-[#111418] dark:text-white">
+                        <div className="flex items-center justify-center size-7 sm:size-8 rounded bg-primary/10 text-primary">
+                            <span className="material-symbols-outlined text-[20px] sm:text-[24px]">
                                 terminal
                             </span>
                         </div>
-                        <h2 className="text-lg font-bold leading-tight tracking-tight">
-                            Pantakan Rungwannarat
+                        <h2 className="text-sm sm:text-base md:text-lg font-bold leading-tight tracking-tight">
+                            <span className="hidden sm:inline">Pantakan Rungwannarat</span>
+                            <span className="sm:hidden">P. Rungwannarat</span>
                         </h2>
                     </div>
                     <div className="hidden md:flex flex-1 justify-end gap-8 items-center">

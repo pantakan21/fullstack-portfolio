@@ -58,28 +58,28 @@ function About() {
             id="about"
             className="w-full flex justify-center pt-20 md:pt-24 pb-12 md:pb-20 px-4 sm:px-6 lg:px-10 bg-background-light dark:bg-background-dark"
         >
-            <div className="w-full max-w-4xl space-y-16">
+            <div className="w-full max-w-4xl space-y-12 sm:space-y-16">
                 {/* Section Header */}
-                <div className="mb-14 max-w-3xl">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20 mb-4">
-                        <span className="material-symbols-outlined !text-lg">
+                <div className="mb-10 sm:mb-14 max-w-3xl">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium text-primary border border-primary/20 mb-3 sm:mb-4">
+                        <span className="material-symbols-outlined !text-base sm:!text-lg">
                             {aboutConfig.header.badge.icon}
                         </span>
                         <span>{aboutConfig.header.badge.label}</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-black text-[#111418] dark:text-white tracking-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#111418] dark:text-white tracking-tight">
                         {aboutConfig.header.title}
                     </h1>
-                    <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                         {aboutConfig.header.description}
                     </p>
                 </div>
                 {/* Main Bio Section */}
-                <div className="bg-surface-light dark:bg-surface-dark rounded-xl p-6 md:p-8 shadow-sm border border-[#e5e7eb] dark:border-[#2a3441]">
-                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="bg-surface-light dark:bg-surface-dark rounded-xl p-4 sm:p-6 md:p-8 shadow-sm border border-[#e5e7eb] dark:border-[#2a3441]">
+                    <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
                         {/* Profile Image */}
-                        <div className="shrink-0 relative group">
-                            <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-700 shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300 bg-gradient-to-br from-primary/20 to-slate-300 dark:to-slate-600">
+                        <div className="shrink-0 relative group mx-auto md:mx-0">
+                            <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-700 shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300 bg-gradient-to-br from-primary/20 to-slate-300 dark:to-slate-600">
                                 <img 
                                     src={profileImage} 
                                     alt="Profile" 
@@ -88,23 +88,23 @@ function About() {
                             </div>
                         </div>
                         {/* Bio Content */}
-                        <div className="flex-1 space-y-6">
+                        <div className="flex-1 space-y-4 sm:space-y-6">
                             <div>
-                                <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
+                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight mb-3 sm:mb-4">
                                     {aboutConfig.bio.title}{" "}
                                     <span className="text-primary">
                                         {aboutConfig.bio.titleHighlight}
                                     </span>
                                 </h2>
-                                <div className="space-y-4 text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                                <div className="space-y-3 sm:space-y-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed">
                                     {aboutConfig.bio.paragraphs.map((paragraph, index) => (
                                         <p key={index}>{paragraph}</p>
                                     ))}
                                 </div>
                             </div>
                             {/* Actions */}
-                            <button className="flex items-center justify-center gap-2 h-12 px-6 bg-primary hover:bg-blue-600 text-white font-bold rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95">
-                                <span className="material-symbols-outlined">
+                            <button className="flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 bg-primary hover:bg-blue-600 text-white text-sm sm:text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95 w-full sm:w-auto">
+                                <span className="material-symbols-outlined text-lg sm:text-xl">
                                     {aboutConfig.resume.icon}
                                 </span>
                                 <span>{aboutConfig.resume.label}</span>
@@ -113,18 +113,18 @@ function About() {
                     </div>
                 </div>
                 {/* Philosophy Cards (Grid) */}
-                <div className="mt-16">
-                    <div className="flex items-center gap-3 mb-6">
-                        <span className="h-6 w-1 bg-primary rounded-full"></span>
-                        <h2 className="text-xl md:text-2xl font-bold text-[#111418] dark:text-white">
+                <div className="mt-12 sm:mt-16">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                        <span className="h-5 sm:h-6 w-1 bg-primary rounded-full"></span>
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#111418] dark:text-white">
                             {aboutConfig.philosophy.title}
                         </h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                         {aboutConfig.philosophy.cards.map((card, index) => (
                             <div
                                 key={index}
-                                className="group relative bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+                                className="group relative bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] p-4 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 overflow-hidden"
                             >
                                 {/* Gradient overlay on hover */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
