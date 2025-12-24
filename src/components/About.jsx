@@ -1,4 +1,5 @@
 import profileImage from '../assets/profilev2-image.png';
+import resumePdf from '../assets/Resume.pdf';
 
 const aboutConfig = {
     header: {
@@ -103,12 +104,16 @@ function About() {
                                 </div>
                             </div>
                             {/* Actions */}
-                            <button className="flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 bg-primary hover:bg-blue-600 text-white text-sm sm:text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95 w-full sm:w-auto">
+                            <a 
+                                href={resumePdf}
+                                download="Resume.pdf"
+                                className="flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 bg-primary hover:bg-blue-600 text-white text-sm sm:text-base font-bold rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95 w-full sm:w-auto"
+                            >
                                 <span className="material-symbols-outlined text-lg sm:text-xl">
                                     {aboutConfig.resume.icon}
                                 </span>
                                 <span>{aboutConfig.resume.label}</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
