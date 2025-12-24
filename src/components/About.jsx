@@ -1,4 +1,4 @@
-import profileImage from '../assets/profile-image.png';
+import profileImage from '../assets/profilev2-image.png';
 
 const aboutConfig = {
     header: {
@@ -83,7 +83,7 @@ function About() {
                                 <img 
                                     src={profileImage} 
                                     alt="Profile" 
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover object-[center_20%]"
                                 />
                             </div>
                         </div>
