@@ -25,7 +25,7 @@
       },
       {
         icon: "code",
-        role: "Web Master Support Trainee",
+        role: "Web Master Support Internship",
         period: "2023",
         company: "Tero Entertainment",
         summary:
