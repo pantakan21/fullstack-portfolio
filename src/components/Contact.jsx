@@ -8,11 +8,11 @@ const contactCards = [
         href: "mailto:pantakan219@gmail.com",
     },
     {
-        icon: "terminal",
-        title: "GitHub",
-        description: "Check my code",
-        actionText: "View Repositories",
-        href: "https://github.com/pantakan21",
+        icon: "phone",
+        title: "Phone",
+        description: "0921219001",
+        actionText: "Call Me",
+        href: "tel:0921219001",
     },
 ];
 
