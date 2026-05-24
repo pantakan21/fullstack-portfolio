@@ -1,14 +1,28 @@
 ---
 header:
   title: Experience
-  description: Hands-on experience building and maintaining frontend applications, with a strong focus on structure, usability, and collaboration.
+  description: Hands-on experience building and maintaining fullstack applications, with a strong focus on system quality, AI-augmented workflows, and cross-team collaboration.
 
 experiences:
   - icon: work
+    role: Fullstack Developer
+    period: "2026 - Present"
+    company: Gofive
+    summary: Working on Venio CRM as a fullstack developer — fixing APIs, resolving defects, integrating third-party services, and using AI to improve code quality across the system.
+    tech:
+      - Angular
+      - TypeScript
+      - REST APIs
+      - DeepSource
+      - Claude Code
+      - Tolgee
+    isPrimary: true
+
+  - icon: work
     role: Software Engineer
-    period: "2024 - Present"
+    period: "2024 - 2026"
     company: INET
-    summary: Worked on internal systems focusing on frontend structure, data-driven UI, and cross-team collaboration.
+    summary: Built and maintained internal management systems focusing on frontend architecture, data-driven UI, and cross-team collaboration.
     tech:
       - Angular
       - TypeScript
@@ -16,7 +30,6 @@ experiences:
       - REST APIs
       - Tailwind CSS
       - GitLab
-    isPrimary: true
 
   - icon: code
     role: Web Master Support Internship

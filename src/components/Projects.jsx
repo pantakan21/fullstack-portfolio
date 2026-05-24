@@ -1,7 +1,7 @@
 import rawContent from '../content/Projects.md?raw';
 import { parseContent } from '../content/loader';
 
-const { header: projectsHeader, modules: subProjects, role: roleConfig, freelance: freelanceConfig } = parseContent(rawContent);
+const { header: projectsHeader, projects, freelance: freelanceConfig } = parseContent(rawContent);
 
 function Projects() {
     return (
@@ -26,70 +26,48 @@ function Projects() {
                     </p>
                 </div>
 
-                {/* Sub Projects */}
-                <div>
-                    <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                        <span className="h-5 sm:h-6 w-1 bg-primary rounded-full"></span>
-                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#111418] dark:text-white">
-                            Modules
-                        </h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-                        {subProjects.map((sub) => (
-                            <div
-                                key={sub.name}
-                                className="group relative bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] p-4 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 overflow-hidden"
-                            >
-                                {/* Gradient overlay on hover */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
-
-                                <div className="relative">
-                                    <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                                        <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 text-primary group-hover:from-primary group-hover:to-primary/80 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:scale-110 shrink-0">
-                                            <span className="material-symbols-outlined !text-lg sm:!text-xl">
-                                                dashboard
-                                            </span>
-                                        </div>
-                                        <h3 className="font-bold text-base sm:text-lg text-[#111418] dark:text-white group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">
-                                            {sub.name}
-                                        </h3>
-                                    </div>
-                                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        {sub.description}
-                                    </p>
+                {/* Projects */}
+                {projects.map((project) => (
+                    <div key={project.name} className="group relative bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                        {/* Project Header */}
+                        <div className="flex items-start justify-between gap-4 mb-4 sm:mb-6">
+                            <div>
+                                <div className="flex items-center gap-2 sm:gap-3 mb-1">
+                                    <span className="h-5 sm:h-6 w-1 bg-primary rounded-full"></span>
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#111418] dark:text-white">
+                                        {project.name}
+                                    </h3>
                                 </div>
+                                <p className="ml-4 text-sm text-slate-500 dark:text-slate-400">{project.company} · {project.role}</p>
                             </div>
-                        ))}
-                    </div>
-                </div>
+                        </div>
 
-                {/* Role */}
-                <div className="group relative bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                        <span className="h-5 sm:h-6 w-1 bg-primary rounded-full"></span>
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#111418] dark:text-white">
-                            My Role & Responsibilities
-                        </h3>
-                    </div>
+                        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mb-4 sm:mb-6 max-w-2xl">
+                            {project.description}
+                        </p>
 
-                    <p className="font-bold text-base sm:text-lg text-[#111418] dark:text-white mb-4 sm:mb-6">
-                        {roleConfig.title}
-                    </p>
-
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                        {roleConfig.responsibilities.map((item, i) => (
-                            <li
-                                key={i}
-                                className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-400"
-                            >
-                                <span className="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">
-                                    check_circle
+                        {/* Modules */}
+                        <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
+                            {project.modules.map((mod) => (
+                                <span key={mod} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                                    {mod}
                                 </span>
-                                <span className="leading-relaxed">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                            ))}
+                        </div>
+
+                        {/* Responsibilities */}
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                            {project.responsibilities.map((item, i) => (
+                                <li key={i} className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-400">
+                                    <span className="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">
+                                        check_circle
+                                    </span>
+                                    <span className="leading-relaxed">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
 
                 {/* Freelance */}
                 <div className="group relative bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2a3441] p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300">

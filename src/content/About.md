@@ -4,14 +4,14 @@ header:
     icon: person
     label: Profile
   title: About Me
-  description: A frontend-focused developer with a strong interest in system design and backend collaboration.
+  description: A fullstack developer passionate about integrating AI across every phase of the SDLC — from planning to delivery.
 
 bio:
-  title: Frontend Developer
+  title: Fullstack Developer
   titleHighlight: ""
   paragraphs:
-    - "Hi, I'm P — a frontend developer who builds interfaces by thinking in systems, not just screens. I specialize in turning complex requirements and messy data into clear, structured, and maintainable user experiences that teams can confidently build on."
-    - "Beyond frontend implementation, I work closely with backend logic, APIs, and data constraints to ensure features behave predictably in real-world usage. I'm actively growing toward end-to-end ownership, eager to take on deeper backend responsibilities and contribute to building robust, scalable systems."
+    - "Hi, I'm P — a fullstack developer who builds end-to-end systems by thinking beyond just the code. I specialize in turning complex requirements into clear, structured, and maintainable solutions — across frontend, backend, and everything in between."
+    - "What drives me most right now is bringing AI into the full development loop — not just as a coding tool, but as a force multiplier across the entire SDLC: from requirement analysis and design, all the way through development, testing, and delivery. I believe the best engineers aren't just strong in their lane — they support the whole team."
 
 resume:
   label: Download Resume
@@ -20,15 +20,15 @@ resume:
 philosophy:
   title: My Philosophy
   cards:
-    - icon: layers
-      title: System-Oriented Thinking
-      description: I focus on understanding how frontend features connect with backend logic and data flow, designing structures that scale and remain maintainable as systems evolve.
-    - icon: clean_hands
-      title: Clear Structure over Clever Code
-      description: I prioritize explicit responsibilities and readable structure over clever implementations, making both frontend and backend collaboration safer and easier.
-    - icon: groups
-      title: Solution-Focused Collaboration
-      description: I collaborate closely with BA, UI/UX, backend engineers, and product teams to explore practical solutions that balance usability, technical feasibility, and system constraints.
+    - icon: psychology
+      title: AI-Augmented Workflow
+      description: I actively integrate AI tools throughout the SDLC — to reduce manual effort, surface insights earlier, and amplify team output beyond what's possible by hand.
+    - icon: hub
+      title: Fullstack Ownership
+      description: I don't stop at frontend or backend. I care about the whole system — and I want to support every role on the team, from BA to QA, not just the developers.
+    - icon: rocket_launch
+      title: Less Work, Better Outcomes
+      description: The goal isn't to work more hours — it's to deliver more value. I look for ways to cut friction, automate repetition, and keep the team focused on what actually matters.
 ---
 
 ## วิธีแก้ไข

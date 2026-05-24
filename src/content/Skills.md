@@ -6,40 +6,40 @@ header:
 cards:
   - icon: web
     title: Frontend Technologies
-    description: Core frontend languages, frameworks, and UI development skills.
+    description: Core frontend languages, frameworks, UI libraries, and design tools.
     skills:
       - Angular
       - TypeScript
       - JavaScript
       - Tailwind CSS
+      - SCSS
       - HTML5 / CSS3
-
-  - icon: palette
-    title: Frontend Design
-    description: Building reusable, responsive, and maintainable UI components.
-    skills:
-      - Component-based Architecture
-      - Reusable Components
-      - Responsive UI Design
-      - Accessibility Awareness
-      - Global Configuration Management
+      - Angular Material
+      - NG-Zorro
+      - Design System
+      - Figma
+      - Tailwind UI
+      - Storybook
 
   - icon: dns
     title: Backend Integration
     description: Integrating frontend applications with backend services and APIs.
     skills:
-      - REST API Consumption
-      - Request / Response Handling
-      - Authentication Token Handling (JWT)
-      - Error Handling & Status Codes
+      - REST APIs
+      - Postman
+      - Swagger / OpenAPI
+      - JWT
 
   - icon: architecture
     title: Application Structure
     description: Organizing frontend codebases for scalability and maintainability.
     skills:
-      - Feature-based Folder Structure
-      - Separation of Concerns
-      - Clean Code Practices
+      - ESLint
+      - Prettier
+      - Feature-based Modules
+      - Micro Frontend
+      - Monorepo Structure
+      - Tolgee
 
   - icon: terminal
     title: Development Workflow
@@ -48,14 +48,30 @@ cards:
       - Git
       - Debugging with Browser DevTools
       - API Debugging
+      - DeepSource
+      - Sentry
+      - PostHog
+      - Exceptionless
+
+  - icon: smart_toy
+    title: AI-Augmented Development
+    description: Designing workflows that leverage AI to reduce manual effort and increase team output across the SDLC.
+    skills:
+      - Claude Code
+      - MCP
+      - NotebookLM
+      - Cursor
+      - GitHub Copilot
+      - Superpower
 
   - icon: groups
     title: Collaboration
     description: Collaborating with team members in a development environment.
     skills:
-      - Requirement Discussion
-      - Participating in Code Reviews
-      - Technical Documentation
+      - GitLab
+      - Jira
+      - Figma
+      - Microsoft Teams
 ---
 
 ## วิธีแก้ไข

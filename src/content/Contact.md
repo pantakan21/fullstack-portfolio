@@ -6,9 +6,9 @@ header:
 cards:
   - icon: mail
     title: Email
-    description: pantakan219@gmail.com
+    description: pantakanwork219@gmail.com
     actionText: Send Message
-    href: "mailto:pantakan219@gmail.com"
+    href: "mailto:pantakanwork219@gmail.com"
 
   - icon: phone
     title: Phone
