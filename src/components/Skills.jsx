@@ -1,76 +1,7 @@
-const skillsCards = [
-    {
-        icon: "web",
-        title: "Frontend Technologies",
-        description:
-            "Core frontend languages, frameworks, and UI development skills.",
-        skills: [
-            "Angular",
-            "TypeScript",
-            "JavaScript",
-            "Tailwind CSS",
-            "HTML5 / CSS3",
-        ],
-    },
-    {
-        icon: "palette",
-        title: "Frontend Design",
-        description:
-            "Building reusable, responsive, and maintainable UI components.",
-        skills: [
-            "Component-based Architecture",
-            "Reusable Components",
-            "Responsive UI Design",
-            "Accessibility Awareness",
-            "Global Configuration Management",
-        ],
-    },
-    {
-        icon: "dns",
-        title: "Backend Integration",
-        description:
-            "Integrating frontend applications with backend services and APIs.",
-        skills: [
-            "REST API Consumption",
-            "Request / Response Handling",
-            "Authentication Token Handling (JWT)",
-            "Error Handling & Status Codes",
-        ],
-    },
-    {
-        icon: "architecture",
-        title: "Application Structure",
-        description:
-            "Organizing frontend codebases for scalability and maintainability.",
-        skills: [
-            "Feature-based Folder Structure",
-            "Separation of Concerns",
-            "Clean Code Practices",
-        ],
-    },
-    {
-        icon: "terminal",
-        title: "Development Workflow",
-        description:
-            "Daily development workflow and debugging practices.",
-        skills: [
-            "Git",
-            "Debugging with Browser DevTools",
-            "API Debugging",
-        ],
-    },
-    {
-        icon: "groups",
-        title: "Collaboration",
-        description:
-            "Collaborating with team members in a development environment.",
-        skills: [
-            "Requirement Discussion",
-            "Participating in Code Reviews",
-            "Technical Documentation",
-        ],
-    },
-];
+import rawContent from '../content/Skills.md?raw';
+import { parseContent } from '../content/loader';
+
+const { header: skillsHeader, cards: skillsCards } = parseContent(rawContent);
 
 function Skills() {
     return (
@@ -88,12 +19,10 @@ function Skills() {
                         <span>Expertise</span>
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#111418] dark:text-white tracking-tight">
-                        Technical Skills & Focus Areas
+                        {skillsHeader.title}
                     </h1>
                     <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                        An overview of the technologies and practices I use to
-                        build structured, maintainable, and scalable web
-                        applications.
+                        {skillsHeader.description}
                     </p>
                 </div>
                 {/* Skills Grid */}

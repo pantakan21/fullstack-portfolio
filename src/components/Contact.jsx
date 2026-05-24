@@ -1,20 +1,7 @@
-// Config Map - ส่วนที่ซ้ำกัน
-const contactCards = [
-    {
-        icon: "mail",
-        title: "Email",
-        description: "pantakan219@gmail.com",
-        actionText: "Send Message",
-        href: "mailto:pantakan219@gmail.com",
-    },
-    {
-        icon: "phone",
-        title: "Phone",
-        description: "0921219001",
-        actionText: "Call Me",
-        href: "tel:0921219001",
-    },
-];
+import rawContent from '../content/Contact.md?raw';
+import { parseContent } from '../content/loader';
+
+const { header: contactHeader, cards: contactCards } = parseContent(rawContent);
 
 function Contact() {
     return (
@@ -32,12 +19,10 @@ function Contact() {
                         <span>Get In Touch</span>
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#111418] dark:text-white tracking-tight mb-3 sm:mb-4">
-                        Let's Build Something Together
+                        {contactHeader.title}
                     </h1>
                     <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed px-2">
-                        I'm currently open to new opportunities. Whether you
-                        have a question about my stack, a project idea, or just
-                        want to say hi, I'll try my best to get back to you!
+                        {contactHeader.description}
                     </p>
                 </div>
                 {/* Contact Grid */}

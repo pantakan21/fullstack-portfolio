@@ -1,42 +1,7 @@
-// Config Map - ส่วนที่ซ้ำกัน
-const subProjects = [
-    {
-        name: "Manpower",
-        description:
-            "Manages staff assignments by showing who is responsible for each task and tracking workload distribution across the team.",
-    },
-    {
-        name: "Adjust Level",
-        description:
-            "Provides a standardized template for evaluating and scoring projects based on predefined criteria.",
-    },
-    {
-        name: "Sales Review Dashboard",
-        description:
-            "A dashboard designed to support sales operations by presenting key data and summaries for day-to-day decision support.",
-    },
-];
-const roleConfig = {
-    title: "Frontend Developer",
-    responsibilities: [
-        "Designed and structured frontend project architecture to support scalable and maintainable features.",
-        "Designed feature-based modules with clear separation of responsibilities between components, services, and state management.",
-        "Organized application state to reduce coupling and improve predictability across complex views and workflows.",
-        "Worked with backend engineers to align API contracts, data structures, and edge cases before implementation.",
-        "Refactored and standardized shared components to improve reuse, readability, and long-term maintainability.",
-        "Collaborated with business analysts, UI/UX designers, and product managers to explore and propose practical solutions that best fit business requirements.",
-    ],
-};
-const freelanceConfig = {
-    title: "Freelance & Independent Work",
-    description:
-        "In addition to full-time work, I’ve taken on freelance and independent projects, focusing on frontend implementation and system clarity.",
-    items: [
-        "Built and customized frontend interfaces based on client requirements.",
-        "Worked directly with clients to clarify scope, requirements, and technical constraints.",
-        "Delivered maintainable solutions with clear structure.",
-    ],
-};
+import rawContent from '../content/Projects.md?raw';
+import { parseContent } from '../content/loader';
+
+const { header: projectsHeader, modules: subProjects, role: roleConfig, freelance: freelanceConfig } = parseContent(rawContent);
 
 function Projects() {
     return (
@@ -54,11 +19,10 @@ function Projects() {
                         <span>Projects</span>
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#111418] dark:text-white tracking-tight">
-                        Internal Management System
+                        {projectsHeader.title}
                     </h1>
                     <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                        An internal system built to provide clear operational
-                        visibility for the company.
+                        {projectsHeader.description}
                     </p>
                 </div>
 
